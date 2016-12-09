@@ -1,0 +1,76 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'scrooloose/nerdtree'
+
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" ##########################################################################################
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+" mac
+" set mouse=a
+
+" split navigation
+" Ctrl + H/J/K/L
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" open NERDTree if no files specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" git
+au FileType gitcommit set tw=72
+
+" common
+syntax on
+set tabstop=4
+set softtabstop=4
+set expandtab
+set backspace=indent,eol,start
+set wildmenu
+set showmatch
+set incsearch
+set ruler
+set hlsearch
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=syntax
+set number
+set ruler
+"let g:powerline_pycmd
+"let g:powerline_pyeval
+"set rtp+=/usr/lib/python3.4/site-packages/powerline/bindings/vim
+set laststatus=2
+set t_Co=256
+colorscheme molokai
+let g:rehash256=1
