@@ -1,0 +1,103 @@
+"*":
+  "atom-beautify":
+    _analyticsUserId: "3faef170-debe-4b47-85f0-3e6d8a50d255"
+    general:
+      _analyticsUserId: "1f62b9df-09f2-4a63-b547-f6de5c3f5545"
+  "atom-material-ui":
+    colors:
+      abaseColor: "#ffa726"
+      accentColor: "#3f8dff"
+      genAccent: true
+      predefinedColor: "Orange"
+    fonts: {}
+    tabs: {}
+    treeView: {}
+    ui:
+      animations: false
+      panelShadows: true
+  "branch-status":
+    personalAccessToken: "402dc84d5d65c812f68d399bf561da4102e61022"
+  core:
+    audioBeep: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "vim-mode"
+      "tool-bar-main"
+      "tool-bar"
+      "tool-bar-almighty"
+      "ex-mode"
+      "language-ansible"
+      "linter-ansible-linting"
+      "linter-python-pep8"
+      "merge-conflicts"
+      "metrics"
+      "tree-view-git-branch"
+      "project-manager"
+    ]
+    ignoredNames: [
+      ".git"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "rspec"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "material-monokai-syntax"
+    ]
+  editor:
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "a8aa2857-4dc9-6d77-a888-b88d08f37d30"
+  "file-icons": {}
+  linter:
+    showErrorPanel: false
+  "linter-ansible-linting":
+    ANSIBLE0006: true
+    ansibleLintExecutablePath: "/usr/local/bin/ansible-lint"
+  "linter-haml": {}
+  "linter-rubocop":
+    command: "/usr/local/opt/rbenv/versions/2.1.7/bin/rubocop --config /Users/frederik/shipcloud/.rubocop.yml"
+  minimap:
+    absoluteMode: true
+    displayMinimapOnLeft: true
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+  "project-viewer":
+    statusBarVisibility: true
+  "python-tools": {}
+  "rest-client":
+    recent_requests_limit: 200
+  rester: {}
+  "ruby-block":
+    highlightLine: false
+    highlightLineNumber: true
+    showBottomPanel: false
+  "tool-bar":
+    iconSize: "16px"
+    visible: false
+  "tree-view": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+  welcome:
+    showOnStartup: false
+".git-commit.text":
+  editor:
+    preferredLineLength: 72
+".rails.rjs.ruby.source":
+  editor:
+    preferredLineLength: 1000
+".rails.ruby.source":
+  editor:
+    preferredLineLength: 100
+".rester.source":
+  editor:
+    autoIndent: true
+".ruby.source":
+  editor:
+    preferredLineLength: 100
