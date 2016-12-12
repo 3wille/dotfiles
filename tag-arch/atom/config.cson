@@ -1,0 +1,112 @@
+"*":
+  "autocomplete-clang": {}
+  autosave:
+    enabled: true
+  core:
+    allowPendingPaneItems: false
+    audioBeep: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "linter-python-pep257"
+      "latexer"
+      "you-complete-me"
+      "rails-i18n-autocomplete"
+      "ruby-syntax-replacer"
+      "linter-rails-best-practices"
+      "multi-cursor-plus"
+      "tool-bar-main"
+      "tree-view-git-branch"
+      "atom-jinja2"
+      "autocomplete-clang"
+      "compare-files"
+      "cpp-refactor"
+      "eval-javascript"
+      "git-plus"
+      "gpp-compiler"
+      "java-importer"
+      "latex-plus"
+      "latex"
+      "linter-chktex"
+      "linter-stylint-h"
+      "python-yapf"
+      "python-isort"
+      "remote-atom"
+      "gpool-diff-minimap"
+      "autocomplete-python"
+      "language-cpp14"
+      "language-ninja"
+      "latex-completions"
+      "ruby-test"
+      "tool-bar"
+      "tool-bar-almighty"
+      "about"
+      "bookmarks"
+    ]
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    backUpBeforeSaving: true
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "b8282d7d-ec60-ddc3-dcd1-44d0ae20a4ae"
+  latex:
+    enableShellEscape: true
+    texPath: "/usr/bin/"
+    viewerPath: "/usr/bin/evince"
+  "latex-plus":
+    ghostscriptBin: "/usr/bin"
+    texBin: "/usr/bin/latex"
+  linter:
+    showErrorPanel: false
+  "linter-cpplint": {}
+  "linter-haml": {}
+  "linter-javac": {}
+  "linter-rails-best-practices": {}
+  "markdown-preview": {}
+  "markdown-writer": {}
+  minimap:
+    absoluteMode: true
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+  "project-viewer": {}
+  "remote-atom": {}
+  "spell-check": {}
+  texlicious:
+    texPath: "/usr/bin/tex"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".erb.html.text":
+  editor:
+    preferredLineLength: 100
+    tabLength: 2
+".html.ruby.text":
+  editor:
+    tabLength: 2
+".java.source":
+  editor:
+    softWrapHangingIndent: 2
+".js.rails.source source.jquery.js":
+  editor:
+    tabLength: 2
+".prolog.source":
+  editor:
+    tabLength: 4
+".rspec.ruby.source":
+  editor:
+    tabLength: 2
+".ruby.source":
+  editor:
+    tabLength: 2
+".slim.text":
+  editor:
+    softWrapHangingIndent: 2
+    tabLength: 2

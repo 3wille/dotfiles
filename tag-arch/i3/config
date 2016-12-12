@@ -1,0 +1,329 @@
+# Should you change your keyboard layout somewhen, delete
+# this file and re-run i3-config-wizard(1).
+# ~/.i3/config
+
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+set $alt Mod1
+set $mod Mod4
+
+# font for window titles. ISO 10646 = Unicode
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+#settings for i3
+hide_edge_borders both
+workspace_auto_back_and_forth yes
+
+set $mygrey #16161D
+
+#background change
+#bindsym grave exec ~/Images/random.sh
+
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+#bindsym XF86Launch1 exec i3-sensible-terminal
+#bindsym $mod+Return exec urxvt -ip -tint gray -sh 40
+#bindsym $mod+Return exec urxvt -bg black -fg white -cr white +rv
+#bindsym $mod+Return exec urxvt
+#bindsym XF86Launch1 exec urxvt -bg #16161D -fg white -cr white +rv
+bindsym $mod+Return exec termite
+
+
+
+bindsym $mod+Shift+Return exec thunar
+bindsym Shift+XF86Launch1 exec thunar
+#lock screen
+#bindsym $mod+BackSpace exec i3lock -c 555555
+# kill focused window
+bindsym $mod+q kill
+
+bindsym XF86Explorer exec ~/Scripts/touchpadtoggle
+
+# start dmenu (a program launcher)
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+H move left
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
+bindsym $mod+Shift+L move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+p split h
+
+# split in vertical orientation
+bindsym $mod+o split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, default)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+#bindsym $mod+e layout toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+
+# next/previous workspace
+bindsym $mod+Tab workspace back_and_forth
+
+# workspace to monitor
+bindsym $mod+$alt+l move workspace to output right
+bindsym $mod+$alt+h move workspace to output left
+
+# workspace names
+set $ws0 0
+set $ws1 1: www
+set $ws2 2: mail
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10: IM
+
+# switch to workspace
+bindsym $mod+grave workspace $ws0
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+#assign [class="^Pidgin$"] 9: pidgin
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+asciitilde move container to workspace $ws0
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+#
+# reload the configuration file
+bindsym $mod+Shift+C reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+# exit i3 (logs you out of your X session)
+#bindsym $mod+Shift+E exit
+
+# exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym h resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        #bindsym 113 resize shrink width 10 px or 10 ppt
+        #bindsym 116 resize grow height 10 px or 10 ppt
+        #bindsym 111 resize shrink height 10 px or 10 ppt
+        #bindsym 114 resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+#scratchpad
+#bindsym $mod+Shift+exclam move scratchpad
+bindsym $mod+T move scratchpad
+bindsym $mod+Shift+T scratchpad show
+
+
+#screenlock
+#bindsym XF86ScreenSaver exec xautolock -locknow
+
+
+#volume
+exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo true && killall -USR1 python ~/.i3/i3pystatus-bottom.py
+bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle && killall -USR1 python ~/.i3/i3pystatus-bottom.py
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5% && killall -USR1 python ~/.i3/i3pystatus-bottom.py
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5% && killall -USR1 python ~/.i3/i3pystatus-bottom.py
+bindsym XF86AudioMicMute exec pactl set-sink-mute alsa_input.pci-0000_00_1b.0.analog-stereo toggle && killall -USR1 python ~/.i3/i3pystatus-bottom.py
+#bindsym XF86AudioMute exec /usr/bin/pulseaudio-ctl mute
+#bindsym XF86AudioRaiseVolume exec /usr/bin/pulseaudio-ctl up
+#bindsym XF86AudioLowerVolume exec /usr/bin/pulseaudio-ctl down
+
+
+bindsym $mod+F1 exec playerctl previous
+bindsym $mod+F2 exec playerctl play-pause
+bindsym $mod+F3 exec playerctl next
+
+#brightness
+bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+#touchtoggle
+#bindsym XF86Display exec touchpadtoggle
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $i3exit --no-startup-id ~/.i3/i3exit
+mode "$mode_system" {
+    bindsym l exec $i3exit lock, mode "default"
+    bindsym e exec $i3exit logout, mode "default"
+    bindsym s exec $i3exit suspend, mode "default"
+    bindsym h exec $i3exit hibernate, mode "default"
+    bindsym r exec $i3exit reboot, mode "default"
+    bindsym Shift+s exec $i3exit shutdown, mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Escape mode "$mode_system"
+#bindsym 38 exec $i3exit lock
+set $programs (1)Chromium (2)Thunderbird (3)Pidgin (0)kill pidgin
+mode "$programs" {
+    bindsym 1 exec --no-startup-id chromium --ignore-gpu-blacklist && mode "default"
+    bindsym 2 exec thunderbird && mode "default"
+    bindsym 3 exec pidgin && exec pidgin
+    bindsym 0 exec killall pidgin && exec pidgin && exec pidgin
+    bindsym Shift+1 exec --no-startup-id chromium --ignore-gpu-blacklist
+    bindsym Shift+2 exec --no-startup-id thunderbird
+    bindsym Escape mode "default"
+}
+bindsym XF86PowerOff mode "$programs"
+bindsym XF86Launch1 mode "$programs"
+
+bindsym XF86LaunchA exec ~/Scripts/monitorswitcher
+bindsym XF86Tools exec ~/Scripts/.tools
+
+#bindsym XF86WWW exec $BROWSER
+
+#screenshot
+bindsym Print exec gnome-screenshot
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#bar {
+#	status_command i3status
+#	status_command sh ~/.i3/conky_status
+#	status_command python ~/.i3/i3pystatus-bottom.py
+#        position bottom
+#	workspace_buttons  yes
+#        font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#        font pango:Sans Mono, Terminus Semi-Condensed 10
+#}
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+  status_command python ~/.i3/i3pystatus-bottom.py
+    id bar-1
+    position bottom
+    workspace_buttons yes
+    font pango:Source Code Pro, github-octicons Regular 9
+  colors {
+    separator #AAAAAA
+    background #1f2326
+    statusline #FFFFFF
+    focused_workspace #9FCA56 #9FCA56 #151718
+    active_workspace #DCCD69 #DCCD69 #151718
+    inactive_workspace #1f2326 #1f2326 #AAAAAA
+    urgent_workspace #CE4045 #CE4045 #FFFFFF
+  }
+}
+
+bar {
+  status_command python ~/.i3/i3pystatus-top.py
+    id bar-2
+    position top
+    workspace_buttons no
+    font pango:Source Code Pro, github-octicons Regular 9
+    tray_output none
+    binding_mode_indicator no
+  colors {
+    separator #AAAAAA
+    background #1f2326
+    statusline #FFFFFF
+    focused_workspace #9FCA56 #9FCA56 #151718
+    active_workspace #DCCD69 #DCCD69 #151718
+    inactive_workspace #1f2326 #1f2326 #AAAAAA
+    urgent_workspace #CE4045 #CE4045 #FFFFFF
+  }
+}
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+#assign [class="^Chromium$"] 1: www
+assign [class="^Thunderbird$"] 2: mail
+assign [class="^Pidgin$"] 10: IM
+assign [class="^Konversation$"] 10: IM
+for_window [class="^Chromium$" instance="^Download$"] floating enable
+for_window [class="^Chromium$"]  border 1pixel
+for_window [class="Subl3"] border 1pixel
+for_window [class="Pidgin"] border 1pixel
+for_window [class="Thunderbird"] border 1pixel
+for_window [class="InputOutput"] floating enable
+
+#exec alias wlan='sudo systemctl restart netctl-auto@wlp6s0'
+#exec feh --bg-scale ~/.bg
+#exec feh --bg-scaled ~/.bg
+exec --no-startup-id nitrogen --restore
+
+#autostart
+#exec --no-startup-id keepass
+exec --no-startup-id alsamixer
+#exec --no-startup-id nitrotasks
+exec --no-startup-id pidgin
+exec --no-startup-id konversation
+#exec --no-startup-id chromium --ignore-gpu-blacklist
+#exec --no-startup-id thunderbird
+exec --no-startup-id /usr/libexec/xscreensaver-autostart
+exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1
+exec xbacklight -set 25
+
+client.focused #4F99D3 #4F99D3 #151718 #9FCA56
+client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
+client.unfocused #1f2326 #1f2326 #AAAAAA #A074C4
+client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
