@@ -1,0 +1,28 @@
+!!remove Lock = Caps_Lock
+!!keysym Caps_Lock = Shift_L
+!!add Shift = Shift_L
+
+keycode 156 = XF86Launch1
+
+keycode 108 = Mode_switch
+
+!!keycode 29 = y Y
+!!keycode 52 = z Z
+
+keysym 2 = 2 at U00B2 U2082
+keysym 3 = 3 numbersign U00B3 U2083
+keysym 5 = 5 percent EuroSign
+keysym c = c C cent degree
+keysym e = e E EuroSign
+keysym a = a A adiaeresis Adiaeresis adiaeresis Adiaeresis
+keysym o = o O odiaeresis Odiaeresis odiaeresis Odiaeresis
+keysym u = u U udiaeresis Udiaeresis udiaeresis Udiaeresis
+keysym s = s S ssharp
+!keysym z = y Y guillemotright
+keysym x = x X guillemotleft
+!keysym y = z Z
+keysym apostrophe = apostrophe quotedbl grave acute
+keysym t = t T trademark
+keysym minus = minus underscore endash
+keysym n = n N notsign
+

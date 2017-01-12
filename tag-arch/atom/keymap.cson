@@ -1,0 +1,9 @@
+'atom-text-editor':
+  'ctrl-b': 'latex:build'
+  'ctrl-shift-t': 'pane:reopen-closed-item'
+'.platform-linux':
+  'ctrl-alt-b': 'fuzzy-finder:toggle-buffer-finder'
+'atom-workspace':
+  'ctrl-alt-v': 'project-viewer:toggle'
+'body':
+  'ctrl-y': 'core:redo'

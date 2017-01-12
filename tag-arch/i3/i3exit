@@ -1,0 +1,35 @@
+#!/bin/sh
+lock() {
+    i3lock -i ~/Stuff/.backgrounds/lock.png
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        lock && systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+	killall chromium
+	wait 5
+        systemctl reboot
+        ;;
+    shutdown)
+	killall chromium
+	wait 5
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+exec wlan
+exec sudo systemctl restart netctl-auto@wlp6s0.service
+exit 0
