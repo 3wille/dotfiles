@@ -43,8 +43,8 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "atom-material-ui"
-      "material-monokai-syntax"
+      "one-dark-ui"
+      "atom-monokai"
     ]
   editor:
     invisibles: {}
