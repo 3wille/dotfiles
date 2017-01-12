@@ -9,4 +9,5 @@
 # atom.workspace.observeTextEditors (editor) ->
 #   editor.onDidSave ->
 #     console.log "Saved! #{editor.getPath()}"
-document.documentElement.style.fontSize = "15px"
+
+# document.documentElement.style.fontSize = "15px"
