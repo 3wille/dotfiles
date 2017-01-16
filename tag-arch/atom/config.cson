@@ -3,7 +3,6 @@
   autosave:
     enabled: true
   core:
-    allowPendingPaneItems: false
     audioBeep: false
     destroyEmptyPanes: false
     disabledPackages: [
@@ -42,16 +41,19 @@
       "about"
       "bookmarks"
     ]
+    telemetryConsent: "limited"
     themes: [
-      "atom-material-ui"
-      "atom-material-syntax"
+      "one-dark-ui"
+      "solarized-dark-syntax"
     ]
   editor:
     backUpBeforeSaving: true
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
+    showInvisibles: true
     softWrap: true
+    softWrapHangingIndent: 4
     tabLength: 4
   "exception-reporting":
     userId: "b8282d7d-ec60-ddc3-dcd1-44d0ae20a4ae"
@@ -62,8 +64,7 @@
   "latex-plus":
     ghostscriptBin: "/usr/bin"
     texBin: "/usr/bin/latex"
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-cpplint": {}
   "linter-haml": {}
   "linter-javac": {}
@@ -80,8 +81,7 @@
   "spell-check": {}
   texlicious:
     texPath: "/usr/bin/tex"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
 ".erb.html.text":
@@ -110,3 +110,7 @@
   editor:
     softWrapHangingIndent: 2
     tabLength: 2
+".source.yaml":
+  editor:
+    softWrapHangingIndent: 4
+    tabLength: 4
