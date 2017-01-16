@@ -1,9 +1,25 @@
 'atom-text-editor':
   'ctrl-b': 'latex:build'
   'ctrl-shift-t': 'pane:reopen-closed-item'
-'.platform-linux':
-  'ctrl-alt-b': 'fuzzy-finder:toggle-buffer-finder'
 'atom-workspace':
   'ctrl-alt-v': 'project-viewer:toggle'
 'body':
+  'ctrl-y': 'core:redo'
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+  'ctrl-y': 'core:redo'
+
+# Overwrite vim-mode-plus with standard atom behaviour
+'.platform-linux':
+  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-.': 'unset!'
+  'ctrl-shift-.': 'key-binding-resolver:toggle'
+  'ctrl-alt-b': 'fuzzy-finder:toggle-buffer-finder'
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+'atom-text-editor.vim-mode-plus.insert-mode':
+  'ctrl-y': 'core:redo'
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'ctrl-y': 'core:redo'
