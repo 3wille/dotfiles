@@ -231,7 +231,7 @@ mode "$programs" {
     bindsym Shift+2 exec --no-startup-id thunderbird
     bindsym Escape mode "default"
 }
-bindsym XF86PowerOff mode "$programs"
+bindsym XF86PowerOff exec $i3exit lock, mode "default"
 bindsym XF86Launch1 mode "$programs"
 
 bindsym XF86LaunchA exec ~/Scripts/monitorswitcher
