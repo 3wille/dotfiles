@@ -2,6 +2,7 @@
 export ZSH=/Users/freddy/.oh-my-zsh
 
 source ~/.aws/credentials.sh
+source ~/.secrets/*
 
 #Docker
 #eval $(docker-machine env default)
@@ -10,11 +11,8 @@ source ~/.aws/credentials.sh
 ## alt+arrows for jumping word
 ### set alt+rightarrow to ^[[1;9C in iTerm key bindings
 bindkey -e
-bindkey '^[[1;9C' forward-word  
-bindkey '^[[1;9D' backward-word
-
-# Script Dir
-export PATH=$PATH:/Users/frederik/Scripts
+#bindkey '^[[1;9C' forward-word
+#bindkey '^[[1;9D' backward-word
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -71,7 +69,7 @@ DEFAULT_USER="freddy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras gitfast rails ruby brew brew-cask bundler colorize common-aliases cp gem osx pow powder postgres rbenv rvm ssh-agent sudo themes autoenv colored-man-pages capistrano zsh-autosuggestions)
+plugins=(git git-extras gitfast rails ruby brew brew-cask bundler colorize common-aliases cp gem osx pow powder postgres rbenv rvm ssh-agent sudo themes colored-man-pages capistrano zsh-autosuggestions)
 
 # User configuration
 
@@ -105,9 +103,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Script Dir
+#export PATH=$PATH:/Users/frederik/Scripts
+
+export PATH=~/Qt5.5.1/5.5/clang_64/bin:$PATH
+
 export EDITOR=vim
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $(brew --prefix autoenv)/activate.sh
