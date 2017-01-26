@@ -34,6 +34,7 @@
       "tree-view-git-branch"
       "project-manager"
     ]
+    excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
     ]
@@ -44,7 +45,7 @@
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "atom-monokai"
+      "material-monokai-syntax"
     ]
   editor:
     invisibles: {}
@@ -60,7 +61,7 @@
     ansibleLintExecutablePath: "/usr/local/bin/ansible-lint"
   "linter-haml": {}
   "linter-rubocop":
-    command: "/usr/local/opt/rbenv/versions/2.1.7/bin/rubocop --config /Users/frederik/shipcloud/.rubocop.yml"
+    command: "/usr/local/bin/rubocop"
   minimap:
     absoluteMode: true
     displayMinimapOnLeft: true
@@ -77,6 +78,8 @@
     highlightLine: false
     highlightLineNumber: true
     showBottomPanel: false
+  "seti-syntax":
+    themeColor: "Orange"
   "tool-bar":
     iconSize: "16px"
     visible: false
