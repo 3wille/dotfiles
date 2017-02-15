@@ -22,8 +22,8 @@ bindkey -e
 #ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir rbenv virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir rbenv virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs status time)
 #POWERLEVEL9K_MODE="awesome-patched"
 DEFAULT_USER="freddy"
 
@@ -69,7 +69,8 @@ DEFAULT_USER="freddy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras gitfast rails ruby brew brew-cask bundler colorize common-aliases cp gem osx pow powder postgres rbenv rvm ssh-agent sudo themes colored-man-pages capistrano zsh-autosuggestions)
+plugins=(autoenv git git-extras gitfast rails ruby brew brew-cask bundler colorize common-aliases cp gem osx pow powder postgres rbenv rvm ssh-agent sudo themes colored-man-pages capistrano zsh-autosuggestions)
+
 
 # User configuration
 
