@@ -22,8 +22,8 @@ bindkey -e
 #ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv virtualenv vcs background_jobs status time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv virtualenv background_jobs status time)
 #POWERLEVEL9K_MODE="awesome-patched"
 DEFAULT_USER="freddy"
 
