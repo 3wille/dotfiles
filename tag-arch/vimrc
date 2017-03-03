@@ -8,7 +8,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Bundle 'chase/vim-ansible-yaml'
-Plugin 'jszakmeister/vim-togglecursor'
+
+" Plugin 'YouCompleteMe'
+" Plugin 'tabular'
+" Plugin 'vim-colors-solarized'
+" Plugin 'vim-markdown'
+" Plugin 'vim-syntax-extra'
+" Plugin 'vimproc.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
