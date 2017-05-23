@@ -1,8 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/freddy/.oh-my-zsh
 
-source ~/.aws/credentials.sh
-source ~/.secrets/*
 
 #Docker
 #eval $(docker-machine env default)
@@ -115,4 +113,12 @@ eval "$(rbenv init - --no-rehash zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source ~/.secrets/*
+
+# disable correction
+unsetopt correct_all
+
+eval $(docker-machine env)
+
 #source $(brew --prefix autoenv)/activate.sh
