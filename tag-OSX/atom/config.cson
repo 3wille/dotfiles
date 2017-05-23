@@ -19,6 +19,7 @@
     personalAccessToken: "402dc84d5d65c812f68d399bf561da4102e61022"
   core:
     audioBeep: false
+    closeEmptyWindows: false
     destroyEmptyPanes: false
     disabledPackages: [
       "vim-mode"
@@ -33,10 +34,15 @@
       "metrics"
       "tree-view-git-branch"
       "project-manager"
+      "git-control"
+      "rails-i18n-autocomplete"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
+      "coverage"
+      "tmp"
+      "log"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
@@ -54,14 +60,14 @@
   "exception-reporting":
     userId: "a8aa2857-4dc9-6d77-a888-b88d08f37d30"
   "file-icons": {}
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-ansible-linting":
     ANSIBLE0006: true
     ansibleLintExecutablePath: "/usr/local/bin/ansible-lint"
   "linter-haml": {}
   "linter-rubocop":
     command: "/usr/local/bin/rubocop"
+  "linter-ui-default": {}
   minimap:
     absoluteMode: true
     displayMinimapOnLeft: true
@@ -69,7 +75,8 @@
       "git-diff": true
       "git-diffDecorationsZIndex": 0
   "project-viewer":
-    statusBarVisibility: true
+    disclaimer:
+      v110: false
   "python-tools": {}
   "rest-client":
     recent_requests_limit: 200
