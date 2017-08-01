@@ -1,8 +1,11 @@
 "*":
+  "activate-power-mode":
+    plugins:
+      playAudio: true
+      screenShake: true
   "atom-beautify":
-    _analyticsUserId: "3faef170-debe-4b47-85f0-3e6d8a50d255"
     general:
-      _analyticsUserId: "1f62b9df-09f2-4a63-b547-f6de5c3f5545"
+      _analyticsUserId: "3faef170-debe-4b47-85f0-3e6d8a50d255"
   "atom-material-ui":
     colors:
       abaseColor: "#ffa726"
@@ -36,6 +39,8 @@
       "project-manager"
       "git-control"
       "rails-i18n-autocomplete"
+      "branch-status"
+      "linter-codeclimate"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -60,14 +65,23 @@
   "exception-reporting":
     userId: "a8aa2857-4dc9-6d77-a888-b88d08f37d30"
   "file-icons": {}
+  "genesis-ui":
+    distractionFree:
+      hideBottom: false
+      hideFiles: false
+      hideTabs: false
   linter: {}
   "linter-ansible-linting":
     ANSIBLE0006: true
     ansibleLintExecutablePath: "/usr/local/bin/ansible-lint"
+  "linter-codeclimate":
+    disableTimeout: true
   "linter-haml": {}
   "linter-rubocop":
     command: "/usr/local/bin/rubocop"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 69
+    showPanel: true
   minimap:
     absoluteMode: true
     displayMinimapOnLeft: true
@@ -75,8 +89,9 @@
       "git-diff": true
       "git-diffDecorationsZIndex": 0
   "project-viewer":
+    customWidth: 132
     disclaimer:
-      v110: false
+      v120: false
   "python-tools": {}
   "rest-client":
     recent_requests_limit: 200
@@ -87,6 +102,7 @@
     showBottomPanel: false
   "seti-syntax":
     themeColor: "Orange"
+  "status-bar": {}
   "tool-bar":
     iconSize: "16px"
     visible: false
