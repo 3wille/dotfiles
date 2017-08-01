@@ -34,3 +34,9 @@ apm install package-sync
 1. Install [iTerm2 Themes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 2. Set iTerm2 config path to ``~/.config/iTerm2``
 3. Go to Settings > MenuMeters to configure them
+
+
+#### Keyboard Layout
+
+To install the keyboard layout it might be necessary to manually create the directory structure in ``~/Library``.
+The layout sets ä, ö, ü, ß and € on alt+[a,o,u,s,e]
