@@ -83,16 +83,11 @@
   "linter-javac": {}
   "linter-rails-best-practices": {}
   "linter-rust":
-<<<<<<< Updated upstream
     cargoPath: "/usr/bin/cargo"
     rustcPath: "/usr/bin/rustc"
   "linter-ui-default":
     panelHeight: 66
     showPanel: true
-=======
-    cargoPath: "/usr/local/bin/cargo"
-    rustcPath: "/usr/local/bin/rustc"
->>>>>>> Stashed changes
   "markdown-preview": {}
   "markdown-writer": {}
   minimap:
@@ -101,7 +96,8 @@
       "git-diff": true
       "git-diffDecorationsZIndex": 0
   "project-viewer":
-    disclaimer: {}
+    disclaimer:
+      v120: false
   racer:
     racerBinPath: "/usr/bin/racer"
     rustSrcPath: "/home/freddy/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
