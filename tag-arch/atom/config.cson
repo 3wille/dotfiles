@@ -7,7 +7,6 @@
     destroyEmptyPanes: false
     disabledPackages: [
       "linter-python-pep257"
-      "latexer"
       "you-complete-me"
       "rails-i18n-autocomplete"
       "ruby-syntax-replacer"
@@ -24,7 +23,6 @@
       "gpp-compiler"
       "java-importer"
       "latex-plus"
-      "latex"
       "linter-chktex"
       "linter-stylint-h"
       "python-yapf"
@@ -40,11 +38,20 @@
       "tool-bar-almighty"
       "about"
       "bookmarks"
+      "parcel"
+      "git-projects"
+      "language-rust"
+      "linter-rust"
+      "latex"
+      "status-bar"
+      "linter"
+      "linter-ui-default"
     ]
+    packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
-      "solarized-dark-syntax"
+      "genesis-ui"
+      "genesis-syntax"
     ]
   editor:
     backUpBeforeSaving: true
@@ -53,11 +60,17 @@
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
+    softWrapAtPreferredLineLength: true
     softWrapHangingIndent: 4
-    tabLength: 4
   "exception-reporting":
     userId: "b8282d7d-ec60-ddc3-dcd1-44d0ae20a4ae"
+  "genesis-ui":
+    distractionFree:
+      hideBottom: false
+      hideFiles: false
+      hideTabs: false
   latex:
+    buildOnSave: true
     enableShellEscape: true
     texPath: "/usr/bin/"
     viewerPath: "/usr/bin/evince"
@@ -69,6 +82,17 @@
   "linter-haml": {}
   "linter-javac": {}
   "linter-rails-best-practices": {}
+  "linter-rust":
+<<<<<<< Updated upstream
+    cargoPath: "/usr/bin/cargo"
+    rustcPath: "/usr/bin/rustc"
+  "linter-ui-default":
+    panelHeight: 66
+    showPanel: true
+=======
+    cargoPath: "/usr/local/bin/cargo"
+    rustcPath: "/usr/local/bin/rustc"
+>>>>>>> Stashed changes
   "markdown-preview": {}
   "markdown-writer": {}
   minimap:
@@ -76,11 +100,23 @@
     plugins:
       "git-diff": true
       "git-diffDecorationsZIndex": 0
-  "project-viewer": {}
+  "project-viewer":
+    disclaimer: {}
+  racer:
+    racerBinPath: "/usr/bin/racer"
+    rustSrcPath: "/home/freddy/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+    show: "Right"
   "remote-atom": {}
   "spell-check": {}
   texlicious:
     texPath: "/usr/bin/tex"
+  tokamak:
+    cargoBinPath: "/usr/bin/cargo"
+    racerBinPath: "/usr/bin/racer"
+    rustcBinPath: "/usr/bin/rustc"
+    toolBinPath: "/usr/bin/rustup"
+  "tool-bar":
+    visible: true
   "tree-view": {}
   welcome:
     showOnStartup: false
@@ -96,6 +132,18 @@
     softWrapHangingIndent: 2
 ".js.rails.source source.jquery.js":
   editor:
+    tabLength: 2
+".js.regexp.replacement.source":
+  editor:
+    softWrapHangingIndent: 2
+    tabLength: 42
+".js.regexp.source":
+  editor:
+    softWrapHangingIndent: 2
+    tabLength: 42
+".js.source":
+  editor:
+    softWrapHangingIndent: 2
     tabLength: 2
 ".prolog.source":
   editor:
@@ -113,4 +161,4 @@
 ".source.yaml":
   editor:
     softWrapHangingIndent: 4
-    tabLength: 4
+    tabLength: 2
