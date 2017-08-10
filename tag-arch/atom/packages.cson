@@ -47,7 +47,6 @@ packages: [
   "minimap-git-diff"
   "nucleus-dark-ui"
   "package-sync"
-  "parcel"
   "pdf-view"
   "project-viewer"
   "python-isort"
