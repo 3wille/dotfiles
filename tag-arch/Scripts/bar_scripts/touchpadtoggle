@@ -1,11 +1,14 @@
 #!/bin/sh
 xmodmap ~/.xmodmap
 
-output=$(xinput list-props 'SynPS/2 Synaptics TouchPad' | grep 'Device Enabled' | grep 0)
+#$device_name = 'SynPS/2 Synaptics TouchPad'
+device_name='Synaptics TM3053-003'
+
+output=$(xinput list-props "$device_name" | grep 'Device Enabled' | grep 0)
 if [ "$output" == "" ]; then
-        $(xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 0)
+        $(xinput set-prop "$device_name" 'Device Enabled' 0)
         echo "Disabled touchpad"
-else 
-        $(xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 1)
-        echo "Enabled touchpad"
+else
+        $(xinput set-prop "$device_name" 'Device Enabled' 1)
+          echo "Enabled touchpad"
 fi
