@@ -299,6 +299,7 @@ for_window [window_role="task_dialog"] floating enable
 assign [class="^Thunderbird$"] 2: mail
 assign [class="^Pidgin$"] 10: IM
 assign [class="^Konversation$"] 10: IM
+assign [class="^Riot"] 10: IM
 for_window [class="^Chromium$" instance="^Download$"] floating enable
 for_window [class="^Chromium$"]  border 1pixel
 for_window [class="Subl3"] border 1pixel
@@ -316,7 +317,8 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id alsamixer
 #exec --no-startup-id nitrotasks
 exec --no-startup-id pidgin
-exec --no-startup-id konversation
+exec --no-startup-id riot-desktop
+#exec --no-startup-id konversation
 #exec --no-startup-id chromium --ignore-gpu-blacklist
 #exec --no-startup-id thunderbird
 exec --no-startup-id /usr/libexec/xscreensaver-autostart
