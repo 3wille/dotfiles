@@ -97,6 +97,8 @@ bindsym $mod+Tab workspace back_and_forth
 # workspace to monitor
 bindsym $mod+$alt+l move workspace to output right
 bindsym $mod+$alt+h move workspace to output left
+bindsym $mod+$alt+j move workspace to output down
+bindsym $mod+$alt+k move workspace to output up
 
 # workspace names
 set $ws0 0
