@@ -21,6 +21,10 @@ status.register("updates",
                 interval=120,
                 backends = [pacman.Pacman()])
 
+status.register("swap",
+        format="swap: {percent_used}",
+        warn_percentage=10,
+        alert_percentage=30)
 
 status.register("mem",
         format=" {percent_used_mem:.0f}% ({used_mem:.0f}MB/{total_mem:.0f}MB)",
