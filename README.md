@@ -24,6 +24,7 @@ rcup -t arch
 5. Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 ``git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim``
 6. Install [package-sync](https://atom.io/packages/package-sync)
+7. Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ```
 apm install package-sync
