@@ -1,3 +1,4 @@
 #!/bin/bash
 
 mount /dev/sda1
+notify-send mounted sda1
