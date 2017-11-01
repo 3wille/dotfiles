@@ -1,4 +1,6 @@
 "*":
+  "atom-package-deps":
+    ignored: []
   "autocomplete-clang": {}
   autosave:
     enabled: true
@@ -40,13 +42,22 @@
       "bookmarks"
       "parcel"
       "git-projects"
-      "language-rust"
-      "linter-rust"
       "latex"
-      "status-bar"
-      "linter"
       "linter-ui-default"
+      "language-rspec"
+      "rspec"
+      "rails-rspec"
+      "language-rspec-plus"
+      "autocomplete-ruby"
+      "project-viewer"
+      "tokamak"
+      "tokamak-terminal"
+      "racer"
+      "linter"
+      "go-plus"
+      "go-debug"
     ]
+    excludeVcsIgnoredPaths: false
     packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
     themes: [
@@ -59,7 +70,6 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-    softWrap: true
     softWrapAtPreferredLineLength: true
     softWrapHangingIndent: 4
   "exception-reporting":
@@ -69,6 +79,10 @@
       hideBottom: false
       hideFiles: false
       hideTabs: false
+  "go-plus":
+    format: {}
+    panel:
+      currentHeight: "10.714285714285714vh"
   latex:
     buildOnSave: true
     enableShellEscape: true
@@ -91,17 +105,19 @@
   "markdown-preview": {}
   "markdown-writer": {}
   minimap:
-    absoluteMode: true
     plugins:
       "git-diff": true
       "git-diffDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
   "project-viewer":
     disclaimer:
       v120: false
   racer:
     racerBinPath: "/usr/bin/racer"
-    rustSrcPath: "/home/freddy/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-    show: "Right"
+  "relative-numbers":
+    showAbsoluteNumbers: true
+    softWrapsCount: false
   "remote-atom": {}
   "spell-check": {}
   texlicious:
@@ -114,20 +130,31 @@
   "tool-bar":
     visible: true
   "tree-view": {}
+  "vim-mode-plus":
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
   welcome:
     showOnStartup: false
 ".erb.html.text":
   editor:
     preferredLineLength: 100
     tabLength: 2
+".gemfile.ruby.source":
+  editor:
+    preferredLineLength: 100
+    softWrap: false
+    softWrapAtPreferredLineLength: false
 ".html.ruby.text":
   editor:
+    preferredLineLength: 100
+    softWrap: false
+    softWrapAtPreferredLineLength: false
     tabLength: 2
 ".java.source":
   editor:
     softWrapHangingIndent: 2
 ".js.rails.source source.jquery.js":
   editor:
+    softWrapHangingIndent: 2
     tabLength: 2
 ".js.regexp.replacement.source":
   editor:
