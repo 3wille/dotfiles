@@ -1,7 +1,7 @@
 if [ -s ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
-xautolock -time 2 -corners ---- -locker "i3lock -i '~/Stuff/.backgrounds/lock.png'" &
+bash -c ~/Scripts/xautolock.sh
 #xcompmgr&
 xrdb ~/.Xresources
 pasystray &
