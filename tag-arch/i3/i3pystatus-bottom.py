@@ -56,6 +56,13 @@ status.register("pulseaudio",
         sink="alsa_output.pci-0000_00_03.0.hdmi-stereo"
         )
 
+status.register("pulseaudio",
+        format="{selected} {volume}% USB",
+        format_muted="{selected} muted USB",
+        color_muted=grey,
+        sink="alsa_output.usb-Logitech_Logitech_G35_Headset-00.analog-stereo"
+        )
+
 status.register("battery",
         format="{status} @{consumption}W: {percentage:.2f}% {remaining:%E%hh:%Mm}",
         alert=True,
