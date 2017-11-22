@@ -56,6 +56,7 @@
       "linter"
       "go-plus"
       "go-debug"
+      "go-signature-statusbar"
     ]
     excludeVcsIgnoredPaths: false
     packagesWithKeymapsDisabled: []
@@ -130,8 +131,7 @@
   "tool-bar":
     visible: true
   "tree-view": {}
-  "vim-mode-plus":
-    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false
 ".erb.html.text":
