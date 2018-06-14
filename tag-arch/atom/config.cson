@@ -1,4 +1,6 @@
 "*":
+  "atom-package-deps":
+    ignored: []
   "autocomplete-clang": {}
   autosave:
     enabled: true
@@ -7,7 +9,6 @@
     destroyEmptyPanes: false
     disabledPackages: [
       "linter-python-pep257"
-      "latexer"
       "you-complete-me"
       "rails-i18n-autocomplete"
       "ruby-syntax-replacer"
@@ -24,7 +25,6 @@
       "gpp-compiler"
       "java-importer"
       "latex-plus"
-      "latex"
       "linter-chktex"
       "linter-stylint-h"
       "python-yapf"
@@ -40,11 +40,30 @@
       "tool-bar-almighty"
       "about"
       "bookmarks"
+      "parcel"
+      "git-projects"
+      "latex"
+      "linter-ui-default"
+      "language-rspec"
+      "rspec"
+      "rails-rspec"
+      "language-rspec-plus"
+      "autocomplete-ruby"
+      "project-viewer"
+      "tokamak"
+      "tokamak-terminal"
+      "racer"
+      "linter"
+      "go-plus"
+      "go-debug"
+      "go-signature-statusbar"
     ]
+    excludeVcsIgnoredPaths: false
+    packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
-      "solarized-dark-syntax"
+      "genesis-ui"
+      "genesis-syntax"
     ]
   editor:
     backUpBeforeSaving: true
@@ -52,12 +71,21 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-    softWrap: true
+    softWrapAtPreferredLineLength: true
     softWrapHangingIndent: 4
-    tabLength: 4
   "exception-reporting":
     userId: "b8282d7d-ec60-ddc3-dcd1-44d0ae20a4ae"
+  "genesis-ui":
+    distractionFree:
+      hideBottom: false
+      hideFiles: false
+      hideTabs: false
+  "go-plus":
+    format: {}
+    panel:
+      currentHeight: "10.714285714285714vh"
   latex:
+    buildOnSave: true
     enableShellEscape: true
     texPath: "/usr/bin/"
     viewerPath: "/usr/bin/evince"
@@ -69,33 +97,76 @@
   "linter-haml": {}
   "linter-javac": {}
   "linter-rails-best-practices": {}
+  "linter-rust":
+    cargoPath: "/usr/bin/cargo"
+    rustcPath: "/usr/bin/rustc"
+  "linter-ui-default":
+    panelHeight: 66
+    showPanel: true
   "markdown-preview": {}
   "markdown-writer": {}
   minimap:
-    absoluteMode: true
     plugins:
       "git-diff": true
       "git-diffDecorationsZIndex": 0
-  "project-viewer": {}
+      linter: true
+      linterDecorationsZIndex: 0
+  "project-viewer":
+    disclaimer:
+      v120: false
+  racer:
+    racerBinPath: "/usr/bin/racer"
+  "relative-numbers":
+    showAbsoluteNumbers: true
+    softWrapsCount: false
   "remote-atom": {}
   "spell-check": {}
   texlicious:
     texPath: "/usr/bin/tex"
+  tokamak:
+    cargoBinPath: "/usr/bin/cargo"
+    racerBinPath: "/usr/bin/racer"
+    rustcBinPath: "/usr/bin/rustc"
+    toolBinPath: "/usr/bin/rustup"
+  "tool-bar":
+    visible: true
   "tree-view": {}
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false
 ".erb.html.text":
   editor:
     preferredLineLength: 100
     tabLength: 2
+".gemfile.ruby.source":
+  editor:
+    preferredLineLength: 100
+    softWrap: false
+    softWrapAtPreferredLineLength: false
 ".html.ruby.text":
   editor:
+    preferredLineLength: 100
+    softWrap: false
+    softWrapAtPreferredLineLength: false
     tabLength: 2
 ".java.source":
   editor:
     softWrapHangingIndent: 2
 ".js.rails.source source.jquery.js":
   editor:
+    softWrapHangingIndent: 2
+    tabLength: 2
+".js.regexp.replacement.source":
+  editor:
+    softWrapHangingIndent: 2
+    tabLength: 42
+".js.regexp.source":
+  editor:
+    softWrapHangingIndent: 2
+    tabLength: 42
+".js.source":
+  editor:
+    softWrapHangingIndent: 2
     tabLength: 2
 ".prolog.source":
   editor:
@@ -113,4 +184,4 @@
 ".source.yaml":
   editor:
     softWrapHangingIndent: 4
-    tabLength: 4
+    tabLength: 2

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PREFIX=$HOME/Scripts/bar_scripts/mounts.d
+eval $PREFIX/$(ls $PREFIX | dmenu)
+xmodmap ~/.Xmodmap

@@ -74,7 +74,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv virtualenv longstatus time)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras github atom battery colorize command-not-found common-aliases gitignore cp archlinux history history-substring-search gnu-utils pip postgres python ssh-agent sudo systemd systemadmin vim-interaction ruby rake bundler rails rbenv)
+plugins=(git git-extras battery colorize command-not-found common-aliases gitignore cp archlinux history history-substring-search gnu-utils pip python ssh-agent sudo systemd vim-interaction ruby rake bundler rails rbenv zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -12,6 +12,7 @@ green  = "#9BEE47"
 red    = "#C75646"
 yellow = "#FFE377"
 white  = "#F7F7F7"
+grey = "#AAAAAA"
 
 # Displays clock like this:
 # Tue 30 Jul 11:59:46 PM KW31
@@ -35,10 +36,31 @@ status.register("backlight",
         backlight="intel_backlight",
         interval=1)
 
-status.register("alsa",
-        format=" {volume}%",
-        format_muted=" muted",
-        card = 1
+#status.register("alsa",
+#        format=" {volume}%",
+#        format_muted=" muted",
+#        card = 1
+#        )
+
+status.register("pulseaudio",
+        format="{selected} {volume}%",
+        format_muted="{selected} muted",
+        color_muted=grey,
+        sink="alsa_output.pci-0000_00_1b.0.analog-stereo"
+        )
+
+status.register("pulseaudio",
+        format="{selected} {volume}% HDMI",
+        format_muted="{selected} muted HDMI",
+        color_muted=grey,
+        sink="alsa_output.pci-0000_00_03.0.hdmi-stereo"
+        )
+
+status.register("pulseaudio",
+        format="{selected} {volume}% USB",
+        format_muted="{selected} muted USB",
+        color_muted=grey,
+        sink="alsa_output.usb-Logitech_Logitech_G35_Headset-00.analog-stereo"
         )
 
 status.register("battery",

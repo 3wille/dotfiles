@@ -21,6 +21,12 @@ status.register("updates",
                 interval=120,
                 backends = [pacman.Pacman()])
 
+status.register("git_status")
+
+status.register("swap",
+        format="swap: {percent_used}",
+        warn_percentage=10,
+        alert_percentage=30)
 
 status.register("mem",
         format=" {percent_used_mem:.0f}% ({used_mem:.0f}MB/{total_mem:.0f}MB)",
@@ -93,7 +99,7 @@ status.register("network",
 status.register("network",
         interface="tun0",
         format_up=" {v4}",
-        color_up=green, 
+        color_up=green,
         format_down="",
         color_down=red,
         unknown_up=True,

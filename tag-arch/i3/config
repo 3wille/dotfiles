@@ -42,7 +42,7 @@ bindsym Shift+XF86Launch1 exec thunar
 # kill focused window
 bindsym $mod+q kill
 
-bindsym XF86Explorer exec ~/Scripts/touchpadtoggle
+bindsym XF86Explorer exec ~/Scripts/bar_scripts/touchpadtoggle
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -97,6 +97,8 @@ bindsym $mod+Tab workspace back_and_forth
 # workspace to monitor
 bindsym $mod+$alt+l move workspace to output right
 bindsym $mod+$alt+h move workspace to output left
+bindsym $mod+$alt+j move workspace to output down
+bindsym $mod+$alt+k move workspace to output up
 
 # workspace names
 set $ws0 0
@@ -234,8 +236,8 @@ mode "$programs" {
 bindsym XF86PowerOff exec $i3exit lock, mode "default"
 bindsym XF86Launch1 mode "$programs"
 
-bindsym XF86LaunchA exec ~/Scripts/monitorswitcher
-bindsym XF86Tools exec ~/Scripts/.tools
+bindsym XF86LaunchA exec ~/Scripts/bar_scripts/monitorswitcher
+bindsym XF86Search exec ~/Scripts/bar_scripts/mounts
 
 #bindsym XF86WWW exec $BROWSER
 
@@ -299,6 +301,7 @@ for_window [window_role="task_dialog"] floating enable
 assign [class="^Thunderbird$"] 2: mail
 assign [class="^Pidgin$"] 10: IM
 assign [class="^Konversation$"] 10: IM
+assign [class="^Riot"] 10: IM
 for_window [class="^Chromium$" instance="^Download$"] floating enable
 for_window [class="^Chromium$"]  border 1pixel
 for_window [class="Subl3"] border 1pixel
@@ -316,7 +319,8 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id alsamixer
 #exec --no-startup-id nitrotasks
 exec --no-startup-id pidgin
-exec --no-startup-id konversation
+exec --no-startup-id riot-desktop
+#exec --no-startup-id konversation
 #exec --no-startup-id chromium --ignore-gpu-blacklist
 #exec --no-startup-id thunderbird
 exec --no-startup-id /usr/libexec/xscreensaver-autostart

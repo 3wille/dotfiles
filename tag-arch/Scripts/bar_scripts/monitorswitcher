@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PREFIX=$HOME/.screenlayout
+eval $PREFIX/$(ls $PREFIX | dmenu)
+xmodmap ~/.Xmodmap
