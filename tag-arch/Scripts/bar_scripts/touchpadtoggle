@@ -1,5 +1,5 @@
 #!/bin/sh
-xmodmap ~/.xmodmap
+xmodmap ~/.Xmodmap
 
 #$device_name = 'SynPS/2 Synaptics TouchPad'
 device_name='Synaptics TM3053-003'
