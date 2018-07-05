@@ -22,25 +22,22 @@
     personalAccessToken: "402dc84d5d65c812f68d399bf561da4102e61022"
   core:
     audioBeep: false
+    closeDeletedFileTabs: true
     closeEmptyWindows: false
     destroyEmptyPanes: false
     disabledPackages: [
-      "vim-mode"
-      "tool-bar-main"
-      "tool-bar"
-      "tool-bar-almighty"
-      "ex-mode"
-      "language-ansible"
-      "linter-ansible-linting"
       "linter-python-pep8"
-      "merge-conflicts"
       "metrics"
-      "tree-view-git-branch"
       "project-manager"
-      "git-control"
       "rails-i18n-autocomplete"
-      "branch-status"
       "linter-codeclimate"
+      "parcel"
+      "project-view"
+      "project-viewer"
+      "atom-beautify"
+      "language-ini"
+      "language-ninja"
+      "vim-mode-plus"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -48,12 +45,16 @@
       "coverage"
       "tmp"
       "log"
+      "node-modules"
+      "coverage"
+      "vendor"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "rspec"
     ]
-    telemetryConsent: "no"
+    projectHome: "/Users/freddy/projects"
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "material-monokai-syntax"
@@ -70,7 +71,12 @@
       hideBottom: false
       hideFiles: false
       hideTabs: false
-  linter: {}
+  "language-elm":
+    elmOraclePath: "/usr/local/bin/elm-oracle"
+  linter:
+    disabledProviders: [
+      "HAML-Lint"
+    ]
   "linter-ansible-linting":
     ANSIBLE0006: true
     ansibleLintExecutablePath: "/usr/local/bin/ansible-lint"
@@ -79,20 +85,26 @@
   "linter-haml": {}
   "linter-rubocop":
     command: "/usr/local/bin/rubocop"
+    disableWhenNoConfigFile: true
   "linter-ui-default":
-    panelHeight: 69
+    panelHeight: 119
     showPanel: true
   minimap:
-    absoluteMode: true
-    displayMinimapOnLeft: true
     plugins:
       "git-diff": true
       "git-diffDecorationsZIndex": 0
   "project-viewer":
-    customWidth: 132
+    customWidth: 153
     disclaimer:
       v120: false
   "python-tools": {}
+  "rails-i18n-plus":
+    priorityOfLocales: [
+      "en"
+      "de"
+    ]
+  "relative-numbers":
+    showAbsoluteNumbers: true
   "rest-client":
     recent_requests_limit: 200
   rester: {}
@@ -110,11 +122,16 @@
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false
 ".git-commit.text":
   editor:
     preferredLineLength: 72
+".plain.text":
+  editor:
+    preferredLineLength: 130
+    softWrapAtPreferredLineLength: true
 ".rails.rjs.ruby.source":
   editor:
     preferredLineLength: 1000
