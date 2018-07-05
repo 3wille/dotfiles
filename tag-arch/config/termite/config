@@ -1,11 +1,10 @@
 [options]
 font = FontAwesome 10
-font = pomicons 10
-font = Ionicons 10
-font = github-octicons 10
+font = pomicons-regular 10
+font = octicons 10
 font = Office Code Pro Light 9
 allow_bold = true
-scroll_on_output = true
+scroll_on_output = false
 scroll_on_keystroke = true
 scrollback_lines = 1000000
 search_wrap = true
