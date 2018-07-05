@@ -29,7 +29,7 @@ status.register("swap",
         alert_percentage=30)
 
 status.register("mem",
-        format=" {percent_used_mem:.0f}% ({used_mem:.0f}MB/{total_mem:.0f}MB)",
+        format="{percent_used_mem:.0f}% ({used_mem:.0f}MB/{total_mem:.0f}MB)",
         warn_color = yellow,
         alert_color = red,
 #        color = white,
@@ -37,7 +37,7 @@ status.register("mem",
 )
 
 status.register("cpu_usage",
-        format=" {usage:02}%",
+        format="{usage:02}%",
 	interval=3
 )
 
@@ -59,7 +59,7 @@ status.register("shell",
 
 status.register("network",
         interface="enp0s25",
-        format_up=" {v4}",
+        format_up="{v4}",
         color_up=grey, #green,
         format_down="",
         color_down=red)
@@ -73,7 +73,7 @@ status.register("network",
 
 status.register("network",
         interface="wlp4s0",
-        format_up=" {essid} ({quality:02.0f}%) {v4}",
+        format_up="{essid} ({quality:02.0f}%) {v4}",
         format_down="",
         color_up = grey, #green,
         color_down = red,
@@ -89,7 +89,7 @@ status.register("network",
 
 status.register("network",
         interface="ppp0",
-        format_up=" {v4}",
+        format_up="{v4}",
         color_up=green,
         format_down="",
         color_down=red,
@@ -98,7 +98,7 @@ status.register("network",
 
 status.register("network",
         interface="tun0",
-        format_up=" {v4}",
+        format_up="{v4}",
         color_up=green,
         format_down="",
         color_down=red,

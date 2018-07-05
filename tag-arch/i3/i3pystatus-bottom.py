@@ -19,8 +19,8 @@ grey = "#AAAAAA"
 #                          ^-- calendar week
 
 status.register("clock",
-        format=" KW%V: %a %-d %b %H:%M",
-	interval=60,
+        format="KW%V: %a %-d %b %H:%M",
+	interval=30,
 )
 
 
@@ -29,10 +29,10 @@ status.register("clock",
 #        format = " {fanout} RPM")
 
 status.register("temp",
-        format=" {temp:.0f}°C",)
+        format="{temp:.0f}°C",)
 
 status.register("backlight",
-        format=" {percentage:.0f}%",
+        format="{percentage:.0f}%",
         backlight="intel_backlight",
         interval=1)
 
@@ -43,22 +43,22 @@ status.register("backlight",
 #        )
 
 status.register("pulseaudio",
-        format="{selected} {volume}%",
-        format_muted="{selected} muted",
+        format="{selected}{volume}%",
+        format_muted="{selected}muted",
         color_muted=grey,
         sink="alsa_output.pci-0000_00_1b.0.analog-stereo"
         )
 
 status.register("pulseaudio",
-        format="{selected} {volume}% HDMI",
-        format_muted="{selected} muted HDMI",
+        format="{selected}{volume}% HDMI",
+        format_muted="{selected}muted HDMI",
         color_muted=grey,
         sink="alsa_output.pci-0000_00_03.0.hdmi-stereo"
         )
 
 status.register("pulseaudio",
-        format="{selected} {volume}% USB",
-        format_muted="{selected} muted USB",
+        format="{selected}{volume}% USB",
+        format_muted="{selected}muted USB",
         color_muted=grey,
         sink="alsa_output.usb-Logitech_Logitech_G35_Headset-00.analog-stereo"
         )
@@ -68,8 +68,8 @@ status.register("battery",
         alert=True,
         alert_percentage=5,
         status={
-            "DIS":  " Discharging",
-            "CHR":  " Charging",
+            "DIS":  "  Discharging",
+            "CHR":  "  Charging",
             "FULL": "⚡ Fully charged",
         },
         full_color=green,

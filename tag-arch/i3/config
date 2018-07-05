@@ -197,6 +197,7 @@ bindsym XF86AudioMicMute exec pactl set-sink-mute alsa_input.pci-0000_00_1b.0.an
 #bindsym XF86AudioMute exec /usr/bin/pulseaudio-ctl mute
 #bindsym XF86AudioRaiseVolume exec /usr/bin/pulseaudio-ctl up
 #bindsym XF86AudioLowerVolume exec /usr/bin/pulseaudio-ctl down
+bindsym XF86AudioPlay exec playerctl play-pause
 
 
 bindsym $mod+F1 exec playerctl previous
@@ -263,7 +264,7 @@ bar {
     id bar-1
     position bottom
     workspace_buttons yes
-    font pango:Source Code Pro, github-octicons Regular 9
+    font pango:Source Code Pro, octicons bold 9
   colors {
     separator #AAAAAA
     background #1f2326
@@ -280,7 +281,7 @@ bar {
     id bar-2
     position top
     workspace_buttons no
-    font pango:Source Code Pro, github-octicons Regular 9
+    font pango:Source Code Pro, octicons bold 9
     tray_output none
     binding_mode_indicator no
   colors {
@@ -300,12 +301,14 @@ for_window [window_role="task_dialog"] floating enable
 #assign [class="^Chromium$"] 1: www
 assign [class="^Thunderbird$"] 2: mail
 assign [class="^Pidgin$"] 10: IM
+assign [class="^Telegram$"] 10: IM
 assign [class="^Konversation$"] 10: IM
 assign [class="^Riot"] 10: IM
 for_window [class="^Chromium$" instance="^Download$"] floating enable
 for_window [class="^Chromium$"]  border 1pixel
 for_window [class="Subl3"] border 1pixel
 for_window [class="Pidgin"] border 1pixel
+for_window [class="Telegram"] border 1pixel
 for_window [class="Thunderbird"] border 1pixel
 for_window [class="InputOutput"] floating enable
 
@@ -316,16 +319,21 @@ exec --no-startup-id nitrogen --restore
 
 #autostart
 #exec --no-startup-id keepass
-exec --no-startup-id alsamixer
+#exec --no-startup-id alsamixer
 #exec --no-startup-id nitrotasks
-exec --no-startup-id pidgin
+#exec --no-startup-id pidgin
+exec --no-startup-id telegram-desktop
 exec --no-startup-id riot-desktop
 #exec --no-startup-id konversation
 #exec --no-startup-id chromium --ignore-gpu-blacklist
 #exec --no-startup-id thunderbird
 exec --no-startup-id /usr/libexec/xscreensaver-autostart
 exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1
+exec --no-startup-id blueman-applet
+exec --no-startup-id xinput set-prop "Synaptics TM3053-003" "Device Enabled" 0
 exec xbacklight -set 25
+
+workspace "1: www" output DP1
 
 client.focused #4F99D3 #4F99D3 #151718 #9FCA56
 client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
