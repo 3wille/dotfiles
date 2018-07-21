@@ -63,6 +63,13 @@ status.register("pulseaudio",
         sink="alsa_output.usb-Logitech_Logitech_G35_Headset-00.analog-stereo"
         )
 
+status.register("pulseaudio",
+        format="{selected}{volume}% Bluetooth",
+        format_muted="{selected}muted Bluetooth",
+        color_muted=grey,
+        sink="bluez_sink.22_66_99_00_A1_94.a2dp_sink"
+        )
+
 status.register("battery",
         format="{status} @{consumption}W: {percentage:.2f}% {remaining:%E%hh:%Mm}",
         alert=True,
