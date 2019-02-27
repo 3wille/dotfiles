@@ -48,7 +48,6 @@
       "python-yapf"
       "python-isort"
       "gpool-diff-minimap"
-      "autocomplete-python"
       "language-cpp14"
       "language-ninja"
       "latex-completions"
@@ -60,7 +59,6 @@
       "git-projects"
       "latex"
       "linter-ui-default"
-      "language-rspec"
       "rspec"
       "rails-rspec"
       "language-rspec-plus"
@@ -72,17 +70,17 @@
       "go-signature-statusbar"
       "language-gfm"
       "linter"
+      "linter-rust"
     ]
     excludeVcsIgnoredPaths: false
     packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
     themes: [
-      "genesis-ui"
-      "genesis-syntax"
+      "arc-ui"
+      "monokai-arc"
     ]
   editor:
     backUpBeforeSaving: true
-    fontSize: 15
     invisibles: {}
     preferredLineLength: 100
     scrollPastEnd: true
@@ -202,6 +200,10 @@
 ".ruby.source":
   editor:
     preferredLineLength: 1000
+    tabLength: 2
+".rust.source":
+  editor:
+    preferredLineLength: 100
     tabLength: 2
 ".slim.text":
   editor:
