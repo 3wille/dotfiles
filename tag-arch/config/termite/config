@@ -19,7 +19,7 @@ cursor_shape = ibeam
 [colors]
 background = #16161D
 #foreground = #839496
-foreground = #bfc8c9
+foreground = #dfe3e4
 cursor     = #93a1a1
 color0     = #073642
 color1     = #dc322f
