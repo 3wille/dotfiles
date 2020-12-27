@@ -76,8 +76,8 @@
     packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
     themes: [
-      "arc-ui"
-      "monokai-arc"
+      "genesis-ui"
+      "genesis-syntax"
     ]
   editor:
     backUpBeforeSaving: true

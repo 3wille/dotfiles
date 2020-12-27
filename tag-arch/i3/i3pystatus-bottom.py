@@ -29,12 +29,13 @@ status.register("clock",
 #        format = " {fanout} RPM")
 
 status.register("temp",
-        format="{temp:.0f}°C",)
+    format="{temp:.0f}°C",)
 
 status.register("backlight",
-        format="{percentage:.0f}%",
-        backlight="intel_backlight",
-        interval=1)
+    format="{percentage:.0f}%",
+    backlight="intel_backlight",
+    interval=1
+)
 
 #status.register("alsa",
 #        format=" {volume}%",
@@ -43,32 +44,32 @@ status.register("backlight",
 #        )
 
 status.register("pulseaudio",
-        format="{selected}{volume}%",
-        format_muted="{selected}muted",
-        color_muted=grey,
-        sink="alsa_output.pci-0000_00_1b.0.analog-stereo"
-        )
+    format="{selected}{volume}%",
+    format_muted="{selected}muted",
+    color_muted=grey,
+    #sink="alsa_output.pci-0000_00_1b.0.analog-stereo"
+)
 
-status.register("pulseaudio",
-        format="{selected}{volume}% HDMI",
-        format_muted="{selected}muted HDMI",
-        color_muted=grey,
-        sink="alsa_output.pci-0000_00_03.0.hdmi-stereo"
-        )
-
-status.register("pulseaudio",
-        format="{selected}{volume}% USB",
-        format_muted="{selected}muted USB",
-        color_muted=grey,
-        sink="alsa_output.usb-Logitech_Logitech_G35_Headset-00.analog-stereo"
-        )
-
-status.register("pulseaudio",
-        format="{selected}{volume}% Bluetooth",
-        format_muted="{selected}muted Bluetooth",
-        color_muted=grey,
-        sink="bluez_sink.22_66_99_00_A1_94.a2dp_sink"
-        )
+#status.register("pulseaudio",
+#        format="{selected}{volume}% HDMI",
+#        format_muted="{selected}muted HDMI",
+#        color_muted=grey,
+#        sink="alsa_output.pci-0000_00_03.0.hdmi-stereo"
+#        )
+#
+#status.register("pulseaudio",
+#        format="{selected}{volume}% USB",
+#        format_muted="{selected}muted USB",
+#        color_muted=grey,
+#        sink="alsa_output.usb-Logitech_Logitech_G35_Headset-00.analog-stereo"
+#        )
+#
+#status.register("pulseaudio",
+#        format="{selected}{volume}% Bluetooth",
+#        format_muted="{selected}muted Bluetooth",
+#        color_muted=grey,
+#        sink="bluez_sink.22_66_99_00_A1_94.a2dp_sink"
+#        )
 
 status.register("battery",
         format="{status} @{consumption}W: {percentage:.2f}% {remaining:%E%hh:%Mm}",

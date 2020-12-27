@@ -37,7 +37,7 @@ status.register("mem",
 )
 
 status.register("cpu_usage",
-        format="{usage:02}%",
+#        format="{usage:02}%",
 	interval=3
 )
 
