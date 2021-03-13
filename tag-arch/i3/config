@@ -323,6 +323,11 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1
 exec --no-startup-id blueman-applet
 exec --no-startup-id xinput set-prop "Synaptics TM3053-003" "Device Enabled" 0
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gnome-flashback
+
 exec xbacklight -set 25
 
 workspace "1: www" output DP1
