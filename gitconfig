@@ -11,3 +11,5 @@
     lg = !"git lg1"
     pf = push --force-with-lease
     st = status
+[init]
+	defaultBranch = main

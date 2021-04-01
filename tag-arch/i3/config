@@ -208,6 +208,7 @@ bindsym $mod+F3 exec playerctl next
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
+bindsym $mod+$alt+backslash exec 1password
 #touchtoggle
 #bindsym XF86Display exec touchpadtoggle
 

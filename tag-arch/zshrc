@@ -29,6 +29,7 @@ antigen bundle dashixiong91/zsh-vscode
 antigen bundle MenkeTechnologies/zsh-cargo-completion
 antigen bundle zsh-users/zsh-completions
 antigen bundle srijanshetty/zsh-pip-completion
+antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
 
 antigen bundle 3v1n0/zsh-bash-completions-fallback
 antigen apply
