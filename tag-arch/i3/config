@@ -324,6 +324,7 @@ exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1
 exec --no-startup-id blueman-applet
 exec --no-startup-id xinput set-prop "Synaptics TM3053-003" "Device Enabled" 0
 exec xbacklight -set 25
+exec --no-startup-id i3-battery-popup -n -L 20 -t 1m 
 
 workspace "1: www" output DP1
 
