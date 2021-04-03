@@ -117,3 +117,5 @@ eval "$(rbenv init -)"
 # source /usr/share/autoenv-git/activate.sh
 
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+. /opt/asdf-vm/asdf.sh
+
