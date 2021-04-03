@@ -31,7 +31,8 @@ set $mygrey #16161D
 #bindsym $mod+Return exec urxvt -bg black -fg white -cr white +rv
 #bindsym $mod+Return exec urxvt
 #bindsym XF86Launch1 exec urxvt -bg #16161D -fg white -cr white +rv
-bindsym $mod+Return exec termite
+#bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 
 
